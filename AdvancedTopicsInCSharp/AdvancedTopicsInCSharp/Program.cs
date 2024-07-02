@@ -6,13 +6,12 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        var n = 0;
-        unchecked
-        {
-            n = int.MinValue - 1;
-        }
-        Console.WriteLine(n);
-
+        //var n = 0;
+        //unchecked
+        //{
+        //    n = int.MinValue - 1;
+        //}
+        //Console.WriteLine(n);
 
         //checked
         //{

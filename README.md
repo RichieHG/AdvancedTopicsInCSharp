@@ -12,6 +12,11 @@ Repository to code the course https://www.udemy.com/course/advanced-topics-cshar
         - [Checked and Unchecked modes](#checked-and-unchecked-modes)
         - [Overflow and Checked](#overflow-and-checked)
     - [BigInteger](#biginteger)
+    - [Floating-Point Types](#floating-point-types)
+    - [Decimal](#decimal)
+    - [SIMD](#simd)
+        - [SIMD Intrinsics](#simd-intrinsics)
+    - [Vector T](#vector-t)
 - [Reflection](#reflection)
 - [Dynamic Programming](#dynamic-programming)
 - [Extension Methods](#extension-methods)
@@ -95,6 +100,34 @@ The difference between other Integer Types are:
 * Is immutable, it means the following:
     - When you try to increment the integer using ++, it doesn't modify underlying object, instead of that creates a new object that replaces the original one. This means, it has serious performance implications.
 
+## Floating-Point Types
+The important thing about floating is not the coverage range, it's about the precision. Also, this type define the idea of *infinity*.
+
+We work commonly with only two types of floatings:
+* float (System.Single)
+    - It's a 32 bits single precition floating-point type
+* double (System.Double)
+    - It's a 64 bits double precision floating-point type
+
+Also, this kind of data types has a Special things:
+* Their calculations do not throw exceptions
+* Division by zero is allowed
+    - This is following the idea of infinity. If we divide a positive/negative number by zero, it give us a positive/negative infinity. (double.PositiveInfinity / float.NegativeInfinity)
+* Arithmetic operations on infinity, give infinity
+    - We can flip the sign of a infinity number
+
+But we have a special situation that produce a **NaN (Not a Number)** result, it comes from the division of zero by zero or infinity by infinit, its characteristics are:
+* It has no sign
+* It's like infinity, any calculations that involves NaN yields NaN.
+* Any comparison with NaN always fails, so, the unique way to check if you result is NaN is using the double.IsNaN(x) method.
+* We can force our code to throw and exception when we receive a NaN as result. 
+## Decimal
+
+## SIMD
+
+### SIMD Intrinsics
+
+## Vector T
 
 # Reflection
 
